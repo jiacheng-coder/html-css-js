@@ -1,0 +1,77 @@
+body {
+  margin: 0;
+  background: #000; 
+}
+video { 
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    transform: translateX(-50%) translateY(-50%);
+    background-size: cover;/*把背景图像扩展至足够大，以使背景图像完全覆盖背景区域。*/
+    transition: 1s opacity;/*[0.0~1.0]，代表从完全透明到完全不透明*/
+}
+.stopfade { 
+   opacity: .5;
+}
+#polina { 
+  font-family: Agenda-Light, Agenda Light, Agenda, Arial Narrow, sans-serif;
+  font-weight:100; 
+  background: rgba(0,0,0,0.3);
+  color: white;
+  padding: 2rem;
+  width: 33%;
+  margin:2rem;
+  float: right;
+  font-size: 1.2rem;
+}
+#polina p:last-child{
+  display: block;
+  text-align: right;
+}
+a{
+  margin-top: 0;
+  color: white;
+  display: block;
+  text-align: right;/*字体右对齐*/
+  text-decoration: none;
+  padding: .5rem;
+}
+a:hover{
+  background:rgba(0,0,0,0.9);
+}
+h1 {
+  font-size: 3rem;
+  text-transform: uppercase;
+  margin-top: 0;
+  letter-spacing: .3rem;/*设置字母之间的间距*/
+}
+
+#polina button { 
+  display: block;
+  width: 80%;
+  padding: .4rem;
+  border: none; 
+  margin: 1rem auto; 
+  font-size: 1.3rem;
+  background: rgba(255,255,255,0.23);
+  color: #fff;
+  border-radius: 30px; 
+  cursor: pointer;/*鼠标移入button时变成手的样式*/
+  transition: .3s background;/*0.3s内使得button的背景色改变*/
+}
+#polina button:hover { 
+   background: rgba(0,0,0,0.5);
+}
+
+@media screen and (max-width: 500px) { 
+  div{width:70%;} 
+}
+@media screen and (max-device-width: 800px) {
+  html { background: url(https://thenewcode.com/assets/images/polina.jpg) #000 no-repeat center center fixed; }
+  #bgvid { display: none; }
+}

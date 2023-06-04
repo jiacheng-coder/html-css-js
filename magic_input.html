@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=ZCOOL+XiaoWei&display=swap" rel="stylesheet"></head>
+<style>
+* {
+    margin: 0; /* 外边距 */
+    padding: 0; /* 内边距 */
+    font-family: 'ZCOOL XiaoWei', serif; /* 字体 */
+}
+
+body {
+    display: flex; /* 弹性盒模型 */
+    justify-content: center; /* 主轴对齐方式 */
+    align-items: center; /* 交叉轴对齐方式 */
+    background: #2b5876;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #4e4376, #2b5876);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #4e4376, #2b5876); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        /* 背景颜色 */
+    height: 100vh; /* 高度 */
+}
+#text {
+    position: relative; /* 相对定位 */
+    outline: none; /* 去除边框 */
+    color: #fff; /* 颜色 */
+    font-weight: 1000; /* 字体维度 */
+    font-size: 10em; /* 字体大小 */
+    width: 100%; /* 宽度 */
+    text-align: center; /* 字体居中 */
+}
+</style>
+
+<body>
+    <div id="text" contenteditable="true">T e x t   </div>
+</body>
+<script>
+    // 获取元素
+    var text = document.getElementById('text');
+    var shadow = '';
+    // 循环给阴影赋值
+    for(var i = 0; i< 200 ; i++) {
+    shadow += (shadow ? ',': '') + i*1 +'px ' + i*1 +'px 0 #312d41'
+    }
+    // 添加阴影
+    text.style.textShadow = shadow;
+</script>
+</html>

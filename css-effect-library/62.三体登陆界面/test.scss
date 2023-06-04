@@ -1,0 +1,26 @@
+$theme-color: #010101;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 1.5rem;
+
+  &:after {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background-color: $theme-color;
+      width: 60%;
+      height: 100vh;
+      clip-path: polygon(0 100%, 0 0, 100% 0, 70% 100%);
+      z-index: -1;
+  }
+}

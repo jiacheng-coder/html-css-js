@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>用户注册表单</title>
+    <link rel="stylesheet" href="form.css" />
+  </head>
+  <body background="/images/cool-background.png">
+    <div class="container">
+      <header class="header">
+        <h1 id="title" class="text-center">成员注册表单</h1>
+        <p id="description" class="description text-center">
+          感谢您花费时间来完成此表单,这将更加有利于您的后续体验~
+        </p>
+      </header>
+      <form id="survey-form">
+        <div class="form-group">
+          <label id="name-label" for="name">姓名</label>
+          <input type="text" name="name" id="name" class="form-control"
+          placeholder="Enter your name" required autofocus//页面启动时自动聚焦
+          />
+        </div>
+
+        <div class="form-group">
+          <label id="email-label" for="email">邮箱</label>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            class="form-control"
+            placeholder="Enter your Email"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label id="number-label" for="number"
+            >年龄<span class="clue">(可选填)</span></label
+          >
+          <input
+            type="number"
+            name="age"
+            id="number"
+            min="10"
+            max="99"
+            class="form-control"
+            placeholder="Age"
+          />
+        </div>
+
+        <div class="form-group">
+          <p>您目前所处的状态是?(工作/学习)</p>
+          <select id="dropdown" name="role" class="form-control" required>
+            <option disabled selected value>Select current role</option>
+            <option value="student">Student</option>
+            <option value="job">Full Time Job</option>
+            <option value="learner">Full Time Learner</option>
+            <option value="preferNo">Prefer not to say</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <p>您愿意推荐此网站给其他人吗？</p>
+          <label>
+            <input
+              name="user-recommend"
+              value="definitely"
+              type="radio"
+              class="input-radio"
+              checked
+            />Definitely</label
+          >
+          <label>
+            <input
+              name="user-recommend"
+              value="maybe"
+              type="radio"
+              class="input-radio"
+            />Maybe</label
+          >
+
+          <label
+            ><input
+              name="user-recommend"
+              value="not-sure"
+              type="radio"
+              class="input-radio"
+            />Not sure</label
+          >
+        </div>
+
+        <div class="form-group">
+          <p>你最喜欢社团的哪一部分?</p>
+          <select id="most-like" name="mostLike" class="form-control" required>
+            <option disabled selected value>Select an option</option>
+            <option value="challenges">Challenges</option>
+            <option value="projects">Projects</option>
+            <option value="community">Community</option>
+            <option value="openSource">Open Source</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <p>
+            下面哪一个部分是您想要改进的?
+            <span class="clue">(可多选)</span>
+          </p>
+
+          <label
+            ><input
+              name="prefer"
+              value="open-source-community"
+              type="checkbox"
+              class="input-checkbox"
+            />开放资源</label
+          >
+          <label
+            ><input
+              name="prefer"
+              value="videos"
+              type="checkbox"
+              class="input-checkbox"
+            />视频体验</label
+          >
+        </div>
+
+        <div class="form-group">
+          <p>更多建议?</p>
+          <textarea
+            id="comments"
+            class="input-textarea"
+            name="comment"
+            placeholder="Enter your comment here..."
+          ></textarea>
+        </div>
+
+        <div class="form-group">
+          <button type="submit" id="submit" class="submit-button">
+            <div class="svg-wrapper-1">
+              <div class="svg-wrapper">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  width="24"
+                  height="24"
+                >
+                  <path fill="none" d="M0 0h24v24H0z"></path>
+                  <path
+                    fill="currentColor"
+                    d="M1.946 9.315c-.522-.174-.527-.455.01-.634l19.087-6.362c.529-.176.832.12.684.638l-5.454 19.086c-.15.529-.455.547-.679.045L12 14l6-8-8 6-8.054-2.685z"
+                  ></path>
+                </svg>
+              </div>
+            </div>
+            <span>提交</span>
+          </button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

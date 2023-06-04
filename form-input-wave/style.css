@@ -1,0 +1,116 @@
+/* 引入字体库 */
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+
+/* 设置content-box和border-box的区别 ：border-box解决了响应式布局的问题 */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: steelblue;
+  color: #fff;
+  font-family: 'Muli', sans-serif;
+
+  /* 设置使得body的最外层div居中 */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+}
+
+.container {
+  background-color: rgba(0, 0, 0, 0.4);
+  /* 内边距：上下20px 左右40px */
+  padding: 20px 40px;
+  border-radius: 5px;
+}
+
+.container h1 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.container a {
+  text-decoration: none;
+  color: lightblue;
+}
+
+.btn {
+  cursor: pointer;
+  display: inline-block;
+  width: 100%;
+  background: lightblue;
+  padding: 15px;
+  font-family: inherit;
+  font-size: 16px;
+  border: 0;
+  border-radius: 5px;
+}
+
+.btn:focus {
+  /* 绘制于元素周围的一条线，位于边框边缘的外围，可起到突出元素的作用。 */
+  /* 设置为0意味阻止高亮 */
+  outline: 0;
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+.text {
+  margin-top: 30px;
+}
+
+.form-control {
+  position: relative;
+  margin: 20px 0 40px;
+  width: 300px;
+}
+
+.form-control input {
+  background-color: transparent;
+  border: 0;
+  border-bottom: 2px #fff solid;
+  display: block;
+  width: 100%;
+  padding: 15px 0;
+  font-size: 18px;
+  color: #fff;
+}
+
+/* :valid用于匹配输入值合法的元素 */
+.form-control input:focus,
+.form-control input:valid {
+  outline: 0;
+  border-bottom-color: #4ABCD2;
+}
+
+.form-control label {
+  position: absolute;
+  top: 15px;
+  left: 0;
+  /* 指定在什么情况下 (如果有) 某个特定的图形元素可以成为鼠标事件的 target (en-US)。 */
+  /* 值none表示鼠标事件“穿透”该元素并且指定该元素“下面”的任何东西。 */
+  pointer-events: none;
+}
+
+/* 闪光点 */
+
+.form-control label span {
+  display: inline-block;
+  font-size: 18px;
+  min-width: 5px;
+  /* cube-bezier() 函数定义三次贝塞尔曲线 */
+  transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+/* 当选中input输入框时：给form-control加上label ,span标签 */
+.form-control input:focus + label span,
+.form-control input:valid + label span {
+  color: lightblue;
+  transform: translateY(-30px);
+}
